@@ -314,4 +314,8 @@ body{
     .container{
         width: 90%;
     }
+
+    .img-container img{
+        height: 150px;
+    }
 }

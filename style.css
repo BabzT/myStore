@@ -64,7 +64,7 @@ body{
 
 .hero{
     min-height: calc(100vh - 60px);
-    background: url("./images/background.jpeg")center/cover no-repeat;
+    background: url("./images/background.avif")center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,9 +301,6 @@ body{
 }
 
 
-
-
-
 @media screen and (max-width:960px) {
     .products-center{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -316,6 +313,6 @@ body{
     }
 
     .img-container img{
-        height: 150px;
+        height: 180px;
     }
 }

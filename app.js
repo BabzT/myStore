@@ -2,6 +2,7 @@
 const details = document.querySelector(".details");
 const menuBtn = document.querySelector(".nav-icon1");
 const homeBtn = document.querySelector(".nav-icon2");
+const title = document.querySelector(".section-title");
 const cartBtn = document.querySelector(".cart-btn");
 const closeCartBtn = document.querySelector(".close-cart");
 const clearCartBtn = document.querySelector(".clear-cart");
@@ -26,11 +27,10 @@ async function renderProducts () {
         let results = "";
         products.forEach(product => {
         results += `
-        <article class="product">
+        <article class="product reveal">
         <div onclick = "displayDetails(${product.id})" class="img-container" loading = "lazy">
             <img class="product-img" src=${product.image} alt="">
         </div>
-        <h3>${product.category}</h3>
         <h3>${product.title}</h3>
         <h4>$${product.price}</h4>
         <button onClick="addToCart(${product.id})" class="bag-btn">
@@ -167,8 +167,10 @@ function changeNumberOfUnits(action, id){
 
     function displayDetails(id){
         menuBtn.style.display = "none";
+        title.style.display = "none"
         homeBtn.style.display = "block";
         productsDOM.innerHTML = "";
+        document.querySelector(".products").style.display = "none"
         document.querySelector(".hero").style.display = "none"
         products = JSON.parse(localStorage.getItem("products"));
         product = products.find((product) => product.id === id);
@@ -185,6 +187,27 @@ function changeNumberOfUnits(action, id){
                     <i class="fas fa-shopping-cart"></i>
                     Add to cart
                 </button>
+                <h3>Description:${product.description}</h3>
             </article>
          `;    
     };
+
+
+    //ANIMATION
+    window.addEventListener("scroll", reveal);
+
+    function reveal(){
+        let content = document.querySelectorAll(".reveal");
+        for(let i = 0; i < content.length; i++){
+            var windowheight = window.innerHeight;
+            var revealTop = content[i].getBoundingClientRect().top;
+            var revealPoint = 60;
+
+            if(revealTop < windowheight - revealPoint){
+                content[i].classList.add("active");
+            }
+            else{
+                content[i].classList.remove("active");
+            }
+        }
+    }

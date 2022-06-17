@@ -84,6 +84,27 @@ body{
     background: rgba(245, 218, 190, 0.6);
     display: inline-block;
     padding: 20px;
+    opacity: 1;
+    transform: scale(0);
+    animation-name: preloader;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes preloader{
+    0%{
+        transform: scale(0);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+ 
+    100%{
+        transform: scale(1);
+    }
 }
 
 .banner-title{
@@ -291,6 +312,24 @@ body{
 .cart-footer h3{
     text-transform: capitalize;
     margin-bottom: 10px;
+}
+
+.details{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 

@@ -1,4 +1,5 @@
 //variables
+const spinnerWrapper = document.querySelector('.spinner-wrapper');
 const details = document.querySelector(".details");
 const menuBtn = document.querySelector(".nav-icon1");
 const homeBtn = document.querySelector(".nav-icon2");
@@ -46,6 +47,7 @@ async function renderProducts () {
     } catch (error) {
        console.log(error) 
     }  
+    spinnerWrapper.style.display = 'none';
 }
 renderProducts()
 
@@ -211,3 +213,6 @@ function changeNumberOfUnits(action, id){
             }
         }
     }
+
+    
+    

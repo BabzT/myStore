@@ -177,7 +177,7 @@ function changeNumberOfUnits(action, id){
         details.innerHTML = "";
             details.innerHTML = `
             <article class="product">
-                <div class="img-container">
+                <div class="img-container2">
                     <img class="product-img" src=${product.image} alt="">
                 </div>
                 <h3>${product.category}</h3>

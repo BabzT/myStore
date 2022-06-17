@@ -73,7 +73,7 @@ body{
 
 .hero{
     min-height: calc(100vh - 60px);
-    background: url("./images/background.avif")center/cover no-repeat;
+    background: url("./images/bg.avif")center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,6 +215,11 @@ body{
 
 .img-container img{
     height: 300px;
+}
+
+.img-container2 img{
+    height: 300px;
+    width: 200px;
 }
 
 .cart-overlay{

@@ -72,14 +72,21 @@ body{
 }
 
 .hero{
+    position: relative;
     min-height: calc(100vh - 60px);
-    background: url("./images/backg.png")center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .banner{
+    position: absolute;
     text-align: center;
     background: rgba(245, 218, 190, 0.6);
     display: inline-block;

@@ -73,6 +73,7 @@ body{
 
 .hero{
     min-height: calc(100vh - 60px);
+    background-color: var(--primaryColor);
     background: url("./images/bg.avif")center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -348,9 +349,16 @@ body{
     .products-center{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
     .cart{
         width: 100%;
     }
+
+    .img-container img{
+        height: 300px;
+        width: 150px;
+    }
+
     .container{
         width: 90%;
     }

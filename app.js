@@ -31,8 +31,8 @@ async function renderProducts () {
         <div onclick = "displayDetails(${product.id})" class="img-container" loading = "lazy">
             <img class="product-img" src=${product.image} alt="">
         </div>
-        <h3>${product.title}</h3>
-        <h4>$${product.price}</h4>
+        <h3 onclick = "displayDetails(${product.id})">${product.title}</h3>
+        <h4 onclick = "displayDetails(${product.id})">$${product.price}</h4>
         <button onClick="addToCart(${product.id})" class="bag-btn">
             <i class="fas fa-shopping-cart"></i>
             Add to cart
